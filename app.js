@@ -157,12 +157,7 @@ var alki = {
 document.getElementById('alki');
 alki.cookiesPerHour();
 
-/*function getRandom(minCustomer, maxCustomer) {
-  return Math.floor(Math.random() * (maxCustomer - minCustomer + 1)) - minCustomer;
-}
 
-//console.log(getRandom(3, 24));
-console.log(cookiesPerHour());*/
 
 
 

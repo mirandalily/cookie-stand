@@ -1,27 +1,3 @@
-/*var cookieShop = function (minCustomer, maxCustomer, avgCookiesPer) {
-  this.minCustomer = minCustomer;
-  this.maxCustomer = maxCustomer;
-  this.avgCookiesPer = avgCookiesPer;
-  //var hours = [];
-  //calcHourlyCustomer: function(){
-    //var hours = [];
-  //  return
-  }
-  calcHourlyTotals: function()
-  calcDailyTotals: function()
-
-
-cookieShop.prototype.generateRandom = function(minCustomer, maxCustomer) {
-  return Math.floor(Math.random() * (maxCustomer - minCustomer + 1)) + minCustomer;
-
-}
-
-cookieShop.prototype.calcHourlyCustomer = function(){
-  var hourlyCustomer = this.generateRandom(17, 88);
-  console.log(hourlyCustomer);
-}
-
-generateRandom();*/
 var time = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ","4pm: ", "5pm: "];
 
 var pikePlace = {
@@ -31,6 +7,7 @@ var pikePlace = {
   maxCustomer: 88,
   avgCookiesPer: 5.2,
   totalCookies: [],
+  total: 0,
 
   customersPerHour: function() {
     return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1)) + this.minCustomer;
@@ -39,18 +16,21 @@ var pikePlace = {
   cookiesPerHour: function() {
     for (var i = 0; i < time.length; i++){
       this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
-      console.log(this.totalCookies);
+      //console.log(this.totalCookies);
       var hour = document.createElement('li');
-
+      this.total += this.totalCookies[i];
+      console.log("@hour " + (10 + i) + " hourly amount is " + this.totalCookies[i] + " and the daily total is " + this.total);
       hour.innerHTML = time[i] + this.totalCookies[i];
       this.domID.appendChild(hour);
     }
+    var hour = document.createElement('li');
+    hour.innerHTML = 'Total: ' + this.total;
+    this.domID.appendChild(hour);
   }
 };
-
 document.getElementById('pike');
-
 pikePlace.cookiesPerHour();
+
 
 var seaTacAirport = {
   storeLocation: 'SeaTac Airport',
@@ -59,20 +39,25 @@ var seaTacAirport = {
   maxCustomer: 44,
   avgCookiesPer: 1.2,
   totalCookies: [],
+  total: 0,
 
   customersPerHour: function() {
     return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1)) + this.minCustomer;
   },
 
   cookiesPerHour: function() {
-    for (var i = 0; i < time.length; i++) {
-    this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
-   console.log(this.totalCookies);
+    for (var i = 0; i < time.length; i++){
+      this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
+      //console.log(this.totalCookies);
       var hour = document.createElement('li');
-
+      this.total += this.totalCookies[i];
+      console.log("@hour " + (10 + i) + " hourly amount is " + this.totalCookies[i] + " and the daily total is " + this.total);
       hour.innerHTML = time[i] + this.totalCookies[i];
       this.domID.appendChild(hour);
     }
+    var hour = document.createElement('li');
+    hour.innerHTML = 'Total: ' + this.total;
+    this.domID.appendChild(hour);
   }
 };
 document.getElementById('seatac');
@@ -85,20 +70,25 @@ var southCenterMall = {
   maxCustomer: 38,
   avgCookiesPer: 1.9,
   totalCookies: [],
+  total: 0,
 
    customersPerHour: function() {
     return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1)) + this.minCustomer;
   },
 
  cookiesPerHour: function() {
-    for (var i = 0; i < time.length; i++) {
-    this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
-   console.log(this.totalCookies);
+    for (var i = 0; i < time.length; i++){
+      this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
+      //console.log(this.totalCookies);
       var hour = document.createElement('li');
-
+      this.total += this.totalCookies[i];
+      console.log("@hour " + (10 + i) + " hourly amount is " + this.totalCookies[i] + " and the daily total is " + this.total);
       hour.innerHTML = time[i] + this.totalCookies[i];
       this.domID.appendChild(hour);
     }
+    var hour = document.createElement('li');
+    hour.innerHTML = 'Total: ' + this.total;
+    this.domID.appendChild(hour);
   }
 };
 document.getElementById('southcenter');
@@ -112,20 +102,25 @@ var bellevueSquare = {
   maxCustomer: 48,
   avgCookiesPer: 3.3,
   totalCookies: [],
+  total: 0,
 
   customersPerHour: function() {
     return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1)) + this.minCustomer;
   },
 
    cookiesPerHour: function() {
-    for (var i = 0; i < time.length; i++) {
-    this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
-   console.log(this.totalCookies);
+    for (var i = 0; i < time.length; i++){
+      this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
+      //console.log(this.totalCookies);
       var hour = document.createElement('li');
-
+      this.total += this.totalCookies[i];
+      console.log("@hour " + (10 + i) + " hourly amount is " + this.totalCookies[i] + " and the daily total is " + this.total);
       hour.innerHTML = time[i] + this.totalCookies[i];
       this.domID.appendChild(hour);
     }
+    var hour = document.createElement('li');
+    hour.innerHTML = 'Total: ' + this.total;
+    this.domID.appendChild(hour);
   }
 };
 document.getElementById('bellevue');
@@ -138,20 +133,25 @@ var alki = {
   maxCustomer: 24,
   avgCookiesPer: 2.6,
   totalCookies: [],
+  total: 0,
 
    customersPerHour: function() {
     return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1)) + this.minCustomer;
   },
 
    cookiesPerHour: function() {
-    for (var i = 0; i < time.length; i++) {
-    this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
-   console.log(this.totalCookies);
+    for (var i = 0; i < time.length; i++){
+      this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
+      //console.log(this.totalCookies);
       var hour = document.createElement('li');
-
+      this.total += this.totalCookies[i];
+      console.log("@hour " + (10 + i) + " hourly amount is " + this.totalCookies[i] + " and the daily total is " + this.total);
       hour.innerHTML = time[i] + this.totalCookies[i];
       this.domID.appendChild(hour);
     }
+    var hour = document.createElement('li');
+    hour.innerHTML = 'Total: ' + this.total;
+    this.domID.appendChild(hour);
   }
 };
 document.getElementById('alki');

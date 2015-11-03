@@ -17,9 +17,9 @@ var pikePlace = {
     for (var i = 0; i < time.length; i++){
       this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
       //console.log(this.totalCookies);
+    this.total += this.totalCookies[i];
+      //console.log("@hour " + (10 + i) + " hourly amount is " + this.totalCookies[i] + " and the daily total is " + this.total);
       var hour = document.createElement('li');
-      this.total += this.totalCookies[i];
-      console.log("@hour " + (10 + i) + " hourly amount is " + this.totalCookies[i] + " and the daily total is " + this.total);
       hour.innerHTML = time[i] + this.totalCookies[i];
       this.domID.appendChild(hour);
     }
@@ -28,7 +28,6 @@ var pikePlace = {
     this.domID.appendChild(hour);
   }
 };
-document.getElementById('pike');
 pikePlace.cookiesPerHour();
 
 
@@ -48,10 +47,10 @@ var seaTacAirport = {
   cookiesPerHour: function() {
     for (var i = 0; i < time.length; i++){
       this.totalCookies.push(Math.floor(this.customersPerHour() * this.avgCookiesPer));
-      //console.log(this.totalCookies);
-      var hour = document.createElement('li');
+        //console.log(this.totalCookies);
       this.total += this.totalCookies[i];
-      console.log("@hour " + (10 + i) + " hourly amount is " + this.totalCookies[i] + " and the daily total is " + this.total);
+        //console.log("@hour " + (10 + i) + " hourly amount is " + this.totalCookies[i] + " and the daily total is " + this.total);
+      var hour = document.createElement('li');
       hour.innerHTML = time[i] + this.totalCookies[i];
       this.domID.appendChild(hour);
     }
@@ -156,8 +155,3 @@ var alki = {
 };
 document.getElementById('alki');
 alki.cookiesPerHour();
-
-
-
-
-

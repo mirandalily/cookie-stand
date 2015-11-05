@@ -1,6 +1,6 @@
 var locations = [];
 
-function cookieStand(storeLocation, minCustomer, maxCustomer, avgCookiesPer) {
+function CookieStand(storeLocation, minCustomer, maxCustomer, avgCookiesPer) {
   this.storeLocation = storeLocation;
   this.minCustomer = minCustomer;
   this.maxCustomer = maxCustomer;
@@ -43,12 +43,12 @@ function cookieStand(storeLocation, minCustomer, maxCustomer, avgCookiesPer) {
   }
 };
 
-var pikePlace = new cookieStand("Pike Place Market", 17, 88, 5.2);
+var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
 // pikePlace.display();
-var seaTac = new cookieStand("Seatac Airport", 6, 44, 1.2);
-var southCenter = new cookieStand("Southcenter Mall", 11, 38, 1.9);
-var bellevue = new cookieStand("Bellevue Mall", 20, 48, 3.3);
-var alki = new cookieStand("Alki Beach", 3, 24, 2.6);
+var seaTac = new CookieStand("Seatac Airport", 6, 44, 1.2);
+var southCenter = new CookieStand("Southcenter Mall", 11, 38, 1.9);
+var bellevue = new CookieStand("Bellevue Mall", 20, 48, 3.3);
+var alki = new CookieStand("Alki Beach", 3, 24, 2.6);
 
 //takes the locations array and displays them instead of pikePlace.display();
 function displayAllLocations() {
@@ -57,11 +57,45 @@ for (var i = 0; i < locations.length; i++) {
   }
 }
 
-displayAllLocations ();
+displayAllLocations();
 
-// function updateLocation() {
-//   pikePlace.avgCookiesPer = 0;
-//   displayAllLocations();
-// }
+//---------------- FORM -----------------
 
-// updateLocation();
+
+//Handles submission of new cookie stand
+
+var newStandForm = document.getElementById("new-cookie-stand");
+
+
+var handleNewStand = function(event) {
+  event.preventDefault();
+
+  if (!event.target.standname.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value){
+    return alert("You must fill in all the fields!");
+  }
+
+var standName = event.target.standname.value;
+console.log(standName);
+var min = event.target.min.value;
+console.log(min);
+var max = event.target.max.value;
+console.log(max);
+var avg = Number(event.target.avg.value);
+console.log(avg);
+
+var newStand = new CookieStand(standName, min, max, avg);
+
+event.target.standname.value = null;
+event.target.min.value = null;
+event.target.max.value = null;
+event.target.avg.value = null;
+
+locations.push(newStand);
+console.log(locations);
+
+newStand.display();
+};
+
+newStandForm.addEventListener('submit', handleNewStand);
+
+

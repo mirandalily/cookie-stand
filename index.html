@@ -2,25 +2,37 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href="style.css">
+   <link href='https://fonts.googleapis.com/css?family=Lato:700,100,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <title></title>
 </head>
 
 <body>
+<nav>
+    <div id="logo">
+    <h1 id="pats">Pat's</h1>
+    <h1 id="salmoncookies">Salmon Cookies</h1>
+    </div>
+    <!--<img src="fish.png">-->
+</nav>
+    <div id = "main">
     <div id="storedata">
     <table id ="table">
         <th>
         <!-- <td>Location</td> -->
-        <td>10AM</td>
-        <td>11AM</td>
-        <td>12PM</td>
-        <td>1PM</td>
-        <td>2PM</td>
-        <td>3PM</td>
-        <td>4PM</td>
-        <td>5PM</td>
+        <td>10am</td>
+        <td>11am</td>
+        <td>12pm</td>
+        <td>1pm</td>
+        <td>2pm</td>
+        <td>3pm</td>
+        <td>4pm</td>
+        <td>5pm</td>
         <td>Total</td>
         </th>
     </table>
+    </div>
     </div>
 
     <form id="new-cookie-stand">
@@ -29,22 +41,20 @@
 
             <label for="standname">Stand Name: </label>
             <input name="standname" type="text">
-
+            </br>
             <label for="min">Minimum Customers: </label>
-            <input name="min" type="number" size="50">
-
+            <input name="min" type="number">
+            </br>
             <label for="max">Maximum Customer: </label>
-            <input name="max" type="number" size="50">
-
+            <input name="max" type="number">
+            </br>
             <label for="avg">Average Cookies: </label>
-            <input name="avg" type="text" size="50">
-
+            <input name="avg" type="text">
+            </br>
             <button id="submit-button" type="submit">Submit Info</button>
-
-
-
-        </fieldset>
+         </fieldset>
     </form>
+
     <script src ="app.js" type="text/javascript"></script>
 </body>
 </html>

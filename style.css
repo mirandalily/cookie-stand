@@ -1,0 +1,105 @@
+body {
+  background-color: white;
+}
+ nav {
+  background-color: #2ecc71;
+  margin-top: -10px;
+  margin-right: -10px;
+  margin-left: -10px;
+ }
+
+ nav img {
+  float: right;
+ }
+
+
+ #pats {
+  display:inline;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  padding: 40px;
+  color: white;
+  text-transform: uppercase;
+ }
+
+ #salmoncookies {
+  display:inline;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  color: white;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-left: -30px;
+ }
+
+ #logo {
+  padding: 40px;
+ }
+
+nav h1 {
+  padding-top: 50px;
+}
+
+
+/* Form Design */
+
+form {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  float:left;
+  margin-left: 70px;
+  letter-spacing: .5px;
+  margin-top: -10px;
+}
+
+fieldset {
+  padding: 50px;
+  border: 1px solid #2ecc71;
+}
+
+label {
+  padding-bottom: 20px;
+  margin-right: 10px;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+/* Table Styles */
+
+#table {
+  float:right;
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #2ecc71;
+  margin-right: 150px;
+  padding: 50px;
+  letter-spacing: 1px;
+}
+
+td {
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+
+tr {
+  text-align: left;
+}
+
+th {
+  margin-right: 20px;
+}
+
+
+#main {
+  margin-top: 150px;
+}
+
+legend {
+  text-transform: uppercase;
+}
+
+/* Footer styles */
+

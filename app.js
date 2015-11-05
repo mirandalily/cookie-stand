@@ -44,13 +44,11 @@ function CookieStand(storeLocation, minCustomer, maxCustomer, avgCookiesPer) {
 };
 
 var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
-// pikePlace.display();
 var seaTac = new CookieStand("Seatac Airport", 6, 44, 1.2);
 var southCenter = new CookieStand("Southcenter Mall", 11, 38, 1.9);
 var bellevue = new CookieStand("Bellevue Mall", 20, 48, 3.3);
 var alki = new CookieStand("Alki Beach", 3, 24, 2.6);
 
-//takes the locations array and displays them instead of pikePlace.display();
 function displayAllLocations() {
 for (var i = 0; i < locations.length; i++) {
   locations[i].display();
@@ -58,9 +56,6 @@ for (var i = 0; i < locations.length; i++) {
 }
 
 displayAllLocations();
-
-//---------------- FORM -----------------
-
 
 //Handles submission of new cookie stand
 
@@ -97,5 +92,3 @@ newStand.display();
 };
 
 newStandForm.addEventListener('submit', handleNewStand);
-
-

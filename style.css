@@ -40,12 +40,6 @@ header h1 {
   padding-top: 50px;
 }
 
-#fish {
-  position: absolute;
-  right: 150px;
-  top: 48px;
-}
-
 #event {
   clear: both;
   position: relative;
@@ -133,6 +127,7 @@ body h2 {
   text-align: left;
 }
 
+
 #locationsandhours h3 {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -145,6 +140,41 @@ ul, li {
   line-height: 1.5em;
 }
 
+/* Fish Flip */
+
+.card-container {
+  height: 150px;
+  perspective: 600;
+  position: absolute;
+  width: 150px;
+  right: 550px;
+  top: 48px;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back {
+  transform: rotateY(180deg);
+}
+
+#grow:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
 
 /* Form Design */
 
